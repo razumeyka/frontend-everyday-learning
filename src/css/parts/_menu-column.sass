@@ -1,0 +1,79 @@
+/*menu column*/
+
+.menu-column 
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	background: #FFFFFF;
+	box-shadow: 14px 0px 25px rgba(86, 128, 248, 0.3);
+	padding: 35px;
+	width: 290px;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 100;
+	&__user
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-bottom: 80px;
+		img
+			width: 86px;
+			height: 86px;
+			border-radius: 50%;
+			object-fit: cover;
+			object-position: center;
+		.select__field
+			text-align: center;
+			padding: 0 30px;
+	&__logout
+		font: 400 16px "TT Norms";
+		text-transform: uppercase;
+		color: $text-color;
+		padding-left: 40px;
+		position: relative;
+		&:before
+			content: "";
+			width: 24px;
+			height: 24px;
+			background: url(/images/icons/logout.svg) no-repeat center/contain;
+			position: absolute;
+			left: 0;
+			top: -3px;
+
+.menu
+	padding: 0;
+	margin: 0;
+	li 
+		list-style: none;
+	a 
+		width: 100%;
+		display: flex;
+		align-items: center;
+		text-align: center;
+		font: 400 16px "TT Norms";
+		color: $text-color;
+		text-transform: uppercase;
+		text-decoration: none;
+		padding: 20px 0;
+		svg 
+			margin-right: 17px;
+	li 
+		&:hover
+			a 
+		&.active
+			a 
+				color: $primary-color;
+				svg rect
+					fill: $primary-color;
+
+
+/*media*/ 
+
+@media screen and (max-width: 1823px)
+	.menu-column
+		padding: 30px;
+		width: 250px;
+		&__user
+			margin-bottom: 30px;
